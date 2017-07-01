@@ -12,7 +12,6 @@ public class IntervalScaffoldingTest {
 
 
 	
-	
 	@Test
 	public void calcula_el_punto_medio_de_un_intervalo(){
 		Interval interval=new Interval(0,10,IntervalType.BOTH_OPENED);
@@ -113,7 +112,13 @@ public class IntervalScaffoldingTest {
 		
 	}
 
-	
+	@Test
+	public void myTest(){
+		Interval intervalComparador=new Interval(0,10,IntervalType.UNOPENED);
+		Interval interval=new Interval(0,10,IntervalType.UNOPENED);
+		IntervalsComparator comparator=new IntervalsComparator();
+		boolean result=comparator.isIncluidedInterval(intervalComparador,interval);
+	}
 	
 	
 	
