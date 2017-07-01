@@ -1,5 +1,6 @@
 package mma.legacy.interval;
 
+import java.math.BigDecimal;
 import java.util.logging.Logger;
 
 /**
@@ -10,9 +11,9 @@ import java.util.logging.Logger;
  */
 public class Interval {
 
-	private double minimum; // número entero que indica el limite inferior del
+	private BigDecimal minimum; // número entero que indica el limite inferior del
 							// intervalo
-	private double maximum; // número entero que indica el limite superior del
+	private BigDecimal maximum; // número entero que indica el limite superior del
 							// intervalo
 	private IntervalType intervalType; // Valor que indica el tipo de  intervalo es
 								// abierto derecha , abierto izquierda, los 2 abiertos ,cerrado 
@@ -33,8 +34,8 @@ public class Interval {
 	 *            Todos los parámetros pueden ser nulos
 	 */
 	public Interval(double minimum, double maximum, IntervalType intervalType) {
-		this.minimum = minimum;
-		this.maximum = maximum;
+		this.minimum = BigDecimal.valueOf(minimum);
+		this.maximum = BigDecimal.valueOf(maximum);
 		this.intervalType=intervalType;
  		comparator=new IntervalsComparator();
 		LOGGER.info("Objeto Interval creado");
@@ -44,13 +45,13 @@ public class Interval {
 	
 
 	public double getMinimum() {
-		return minimum;
+		return minimum.doubleValue();
 	}
 
 
 
 	public double getMaximum() {
-		return maximum;
+		return maximum.doubleValue();
 	}
 
 
@@ -67,7 +68,14 @@ public class Interval {
 	 * @return double
 	 */
 	public double getMidPoint() {
-		return (maximum + minimum) / 2;
+		BigDecimal midPoint=new BigDecimal(0);
+		midPoint.add(maximum);
+		midPoint.add(minimum);
+		midPoint.divide(new BigDecimal(2));
+		
+//				(maximum + minimum) / 2;
+		
+		return midPoint.doubleValue();
 	}
 
 	/**
@@ -127,7 +135,7 @@ public class Interval {
 				return false;
 			}
 		}
-		return this.isWithinInterval(interval.minimum) || this.isWithinInterval(interval.maximum);
+		return this.isWithinInterval(interval.minimum.doubleValue()) || this.isWithinInterval(interval.maximum.doubleValue());
 	}
 
 }
