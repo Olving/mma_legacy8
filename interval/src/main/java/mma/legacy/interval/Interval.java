@@ -103,7 +103,7 @@ public class Interval {
 	 */
 
 	public boolean intersectsWith(Interval interval) {
-		if (minimum == interval.maximum) {
+		if (minimum.compareTo(interval.maximum)==0) {
 			switch (intervalType) {
 			case BOTH_OPENED:
 			case LEFT_OPENED:
@@ -116,7 +116,7 @@ public class Interval {
 				return false;
 			}
 		}
-		if (maximum == interval.minimum) {
+		if (maximum.compareTo(interval.minimum)==0) {
 			switch (intervalType) {
 			case BOTH_OPENED:
 			case RIGHT_OPENED:
