@@ -68,14 +68,8 @@ public class Interval {
 	 * @return double
 	 */
 	public double getMidPoint() {
-		BigDecimal midPoint=new BigDecimal(0);
-		midPoint.add(maximum);
-		midPoint.add(minimum);
-		midPoint.divide(new BigDecimal(2));
-		
-//				(maximum + minimum) / 2;
-		
-		return midPoint.doubleValue();
+	
+		return(maximum.doubleValue()+ minimum.doubleValue()) / 2;
 	}
 
 	/**
