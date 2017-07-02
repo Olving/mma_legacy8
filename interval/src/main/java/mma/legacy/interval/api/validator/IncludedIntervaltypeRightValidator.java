@@ -26,7 +26,7 @@ public class IncludedIntervaltypeRightValidator implements IncludedIntervalValid
 	
 		
 		
-		boolean isMinimunIncluded =isMinimunIncluded = includeValueValidator.validate(intervalComparador, interval.getMinimum());
+		boolean isMinimunIncluded = includeValueValidator.validate(intervalComparador, interval.getMinimum());
 		
 		if (!isMaximumIncluded) {
 			isMaximumIncluded = includeValueValidator.validate(intervalComparador, interval.getMaximum());
