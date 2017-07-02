@@ -33,7 +33,7 @@ private IncludedIntervalValidator includedValidator;
 	 */
 	public boolean isWithinInterval(Interval interval, double value) {
 		
-		return withinIntervalValidator.validate(interval, new BigDecimal(value));
+		return withinIntervalValidator.validate(interval,  BigDecimal.valueOf(value));
 	}
 
 	/**
