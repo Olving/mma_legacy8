@@ -9,7 +9,7 @@ public class MidPointCalculator {
 	
 	public BigDecimal calculate(Interval interval) {
 		if(interval!=null){
-			return (interval.getMinimum().add(interval.getMaximum()).divide( BigDecimal.valueOf(2d)));
+			return interval.getMinimum().add(interval.getMaximum()).divide( BigDecimal.valueOf(2d));
 		}
 		
 		return BigDecimal.valueOf(0);
