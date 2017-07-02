@@ -9,9 +9,7 @@ import java.math.BigDecimal;
  */
 public class BigDecimalComparator {
 
-	public BigDecimalComparator() {
-		
-	}
+
 	/**
 	 * Calcula si  bBigOrEquals es mayor o igual que bFrist
 	 * @param bFrist
