@@ -29,27 +29,4 @@ public class IncludedIntervaltypeUnopenedValidator implements IncludedIntervalVa
 	
 	}
 
-//	@Override
-//	public boolean validator(Interval intervalComparador, Interval interval) {
-//		switch (interval.getIntervalType()) {
-//		case BOTH_OPENED:
-//			return (minimumIncluded || intervalComparador.getMinimum() == interval.getMinimum())
-//					&& (maximumIncluded || intervalComparador.getMaximum() == interval.getMaximum());
-//		case LEFT_OPENED:
-//			return (minimumIncluded || intervalComparador.getMinimum() == interval.getMinimum())
-//					&& (maximumIncluded || intervalComparador.getMaximum() == interval.getMaximum());
-//		case RIGHT_OPENED:
-//			return (minimumIncluded || intervalComparador.getMinimum() == interval.getMinimum())
-//					&& (maximumIncluded || intervalComparador.getMaximum() == interval.getMaximum());
-//		case UNOPENED:
-//			return (minimumIncluded || intervalComparador.getMinimum() == interval.getMinimum())
-//					&& (maximumIncluded || intervalComparador.getMaximum() == interval.getMaximum());
-//		default:
-//			assert false;
-//			return false;
-//		}
-//	}
-//
-//	
-	
 }

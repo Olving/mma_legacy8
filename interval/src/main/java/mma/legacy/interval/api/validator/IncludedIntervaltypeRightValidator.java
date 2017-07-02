@@ -39,28 +39,4 @@ public class IncludedIntervaltypeRightValidator implements IncludedIntervalValid
 	
 	
 	
-	
-
-//	@Override
-//	public boolean validator(Interval intervalComparador, Interval interval) {
-//		switch (interval.getIntervalType()) {
-//		case BOTH_OPENED:
-//			return (minimumIncluded || intervalComparador.getMinimum() == interval.getMinimum())
-//					&& (maximumIncluded || intervalComparador.getMaximum() == interval.getMaximum());
-//		case LEFT_OPENED:
-//			return (minimumIncluded || intervalComparador.getMinimum() == interval.getMinimum()) && (maximumIncluded);
-//		case RIGHT_OPENED:
-//			return (minimumIncluded || intervalComparador.getMinimum() == interval.getMinimum())
-//					&& (maximumIncluded || intervalComparador.getMaximum() == interval.getMaximum());
-//		case UNOPENED:
-//			return (minimumIncluded || intervalComparador.getMinimum() == interval.getMinimum()) && (maximumIncluded);
-//		default:
-//			assert false;
-//			return false;
-//		}
-//		
-//	}
-
-	
-	
 }
