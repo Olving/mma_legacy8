@@ -1,13 +1,16 @@
-package mma.legacy.interval;
+package mma.legacy.interval.api;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 import org.junit.Before;
 import org.junit.Test;
 
-public class IntervalTest {
+import mma.legacy.interval.Interval;
+import mma.legacy.interval.IntervalFactory;
+import mma.legacy.interval.IntervalType;
+
+public class IntervalsApiTest {
 	private Interval bothOpenedPivot;
 	private Interval leftOpenedPivot;
 	private Interval rightOpenedPivot;

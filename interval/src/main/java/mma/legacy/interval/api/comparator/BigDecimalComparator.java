@@ -1,4 +1,4 @@
-package mma.legacy.interval;
+package mma.legacy.interval.api.comparator;
 
 import java.math.BigDecimal;
 

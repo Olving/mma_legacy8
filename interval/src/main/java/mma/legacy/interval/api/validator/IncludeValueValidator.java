@@ -1,7 +1,10 @@
-package mma.legacy.interval;
+package mma.legacy.interval.api.validator;
 
 import java.math.BigDecimal;
 import java.util.logging.Logger;
+
+import mma.legacy.interval.Interval;
+import mma.legacy.interval.api.comparator.BigDecimalComparator;
 
 public class IncludeValueValidator  {
 	BigDecimalComparator bdComparator;

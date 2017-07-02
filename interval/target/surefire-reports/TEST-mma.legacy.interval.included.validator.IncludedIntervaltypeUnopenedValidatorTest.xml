@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="mma.legacy.interval.included.validator.IncludedIntervaltypeUnopenedValidatorTest" time="0.047" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="mma.legacy.interval.included.validator.IncludedIntervaltypeUnopenedValidatorTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Workspaces\Synectic\Leviathan\products\Java\Framework\jre\bin"/>
@@ -27,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="C:\workspace_MMA\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf919185191697166403.tmp"/>
+    <property name="classworlds.conf" value="C:\workspace_MMA\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf8649481312995608616.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Workspaces\Synectic\Leviathan\products\Java\Framework\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:/Workspaces/Synectic/Leviathan/products/Java/Framework/bin/../jre/bin/server;C:/Workspaces/Synectic/Leviathan/products/Java/Framework/bin/../jre/bin;C:/Workspaces/Synectic/Leviathan/products/Java/Framework/bin/../jre/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Workspaces\Synectic\Leviathan\products\Eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -61,8 +61,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="mma.legacy.interval.included.validator.IncludedIntervaltypeUnopenedValidatorTest" name="isIncludedIntervalTypeUnopenedRightTest" time="0.032"/>
+  <testcase classname="mma.legacy.interval.included.validator.IncludedIntervaltypeUnopenedValidatorTest" name="isIncludedIntervalTypeUnopenedRightTest" time="0"/>
   <testcase classname="mma.legacy.interval.included.validator.IncludedIntervaltypeUnopenedValidatorTest" name="isIncludedIntervalTypeUnopenedtTest" time="0"/>
   <testcase classname="mma.legacy.interval.included.validator.IncludedIntervaltypeUnopenedValidatorTest" name="isIncludedIntervalTypeUnopenedLeftTest" time="0"/>
-  <testcase classname="mma.legacy.interval.included.validator.IncludedIntervaltypeUnopenedValidatorTest" name="isIncludedIntervalTypeUnopenedTest" time="0.015"/>
+  <testcase classname="mma.legacy.interval.included.validator.IncludedIntervaltypeUnopenedValidatorTest" name="isIncludedIntervalTypeUnopenedTest" time="0"/>
 </testsuite>

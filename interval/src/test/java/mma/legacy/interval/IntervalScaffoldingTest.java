@@ -8,6 +8,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import org.junit.Before;
 import org.junit.Test;
 
+import mma.legacy.interval.api.IntervalsApi;
+
 
 public class IntervalScaffoldingTest {	
 

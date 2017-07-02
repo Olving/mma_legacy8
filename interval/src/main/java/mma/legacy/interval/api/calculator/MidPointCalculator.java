@@ -1,6 +1,8 @@
-package mma.legacy.interval;
+package mma.legacy.interval.api.calculator;
 
 import java.math.BigDecimal;
+
+import mma.legacy.interval.Interval;
 
 public class MidPointCalculator {
 	

@@ -9,6 +9,8 @@ import org.junit.Test;
 import mma.legacy.interval.Interval;
 import mma.legacy.interval.IntervalFactory;
 import mma.legacy.interval.IntervalType;
+import mma.legacy.interval.api.validator.IncludedIntervalValidatorStrategy;
+import mma.legacy.interval.api.validator.IncludedIntervaltypeLeftValidator;
 
 public class IncludedIntervaltypeLeftValidatorTest {
 	

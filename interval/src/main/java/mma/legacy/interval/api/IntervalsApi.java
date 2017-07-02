@@ -1,8 +1,11 @@
-package mma.legacy.interval;
+package mma.legacy.interval.api;
 
 import java.math.BigDecimal;
 
-import mma.legacy.interval.included.validator.IncludedIntervalValidator;
+import mma.legacy.interval.Interval;
+import mma.legacy.interval.api.calculator.MidPointCalculator;
+import mma.legacy.interval.api.validator.IncludeValueValidator;
+import mma.legacy.interval.api.validator.IncludedIntervalValidator;
 
 
 public class IntervalsApi {

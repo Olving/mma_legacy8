@@ -12,6 +12,8 @@ import mma.legacy.interval.Interval;
 import mma.legacy.interval.IntervalFactory;
 import mma.legacy.interval.IntervalType;
 import mma.legacy.interval.IntervalsTestCreator;
+import mma.legacy.interval.api.validator.IncludedIntervalValidatorStrategy;
+import mma.legacy.interval.api.validator.IncludedIntervaltypeRightValidator;
 
 public class IncludedIntervaltypeRightValidatorTest {
 	
