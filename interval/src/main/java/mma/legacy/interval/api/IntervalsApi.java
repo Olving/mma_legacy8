@@ -8,6 +8,11 @@ import mma.legacy.interval.api.validator.IncludeValueValidator;
 import mma.legacy.interval.api.validator.IncludedIntervalValidator;
 
 
+/**
+ * Esta clase es el punto de entrada para el desarrollador Permite ejecutar todas las operaciones de Intervalos.
+ * @author Agustin
+ *
+ */
 public class IntervalsApi {
 	
 private IncludeValueValidator withinIntervalValidator;
@@ -31,7 +36,6 @@ private IncludedIntervalValidator includedValidator;
 	 * Valida que el parametro de entra value
 	 * este dentro de los limites del intervalo
 	 * @param value
-	 * @throws NulPointerException
 	 * @return boolean
 	 */
 	public boolean isWithinInterval(Interval interval, double value) {
@@ -42,7 +46,6 @@ private IncludedIntervalValidator includedValidator;
 	/**
 	 * Verifica que un intervalo este dentro de otro intervalo
 	 * @param interval
-	 * @throws NulPointerException
 	 * @return boolean
 	 */
 	public boolean isIncluidedInterval(Interval intervalComparador, Interval interval) {
