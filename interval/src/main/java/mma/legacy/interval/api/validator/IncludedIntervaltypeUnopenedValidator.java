@@ -6,11 +6,10 @@ import mma.legacy.interval.api.comparator.BigDecimalComparator;
 public class IncludedIntervaltypeUnopenedValidator implements IncludedIntervalValidatorStrategy{
 
 	private IncludeValueValidator includeValueValidator;
-	private BigDecimalComparator bdComparator;
+
 
 	public IncludedIntervaltypeUnopenedValidator() {
 		this.includeValueValidator = new IncludeValueValidator();
-		this.bdComparator = new BigDecimalComparator();
 	}
 	@Override
 	public boolean validator(Interval intervalComparador, Interval interval) {
