@@ -20,21 +20,19 @@ public class IncludeValueValidator  {
 	 * @return boolean
 	 */
 	public boolean validate(Interval interval,BigDecimal value) {
-		boolean result;
+		
 		switch (interval.getIntervalType()) {
 		case BOTH_OPENED:
-			result= bothValidate(interval, value);
+			return bothValidate(interval, value);
 		case LEFT_OPENED:
-			result=  leftValidate(interval, value);
+			return leftValidate(interval, value);
 		case RIGHT_OPENED:
-			result=  rightValidate(interval, value);
+			return rightValidate(interval, value);
 		case UNOPENED:
-			result=  unopenedValidate(interval, value);
+			return unopenedValidate(interval, value);
 		default:
-			result=  false;
+			return false;
 		}
-		
-		return result;
 	}
 	
 	private boolean bothValidate(Interval interval,BigDecimal value){
