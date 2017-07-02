@@ -15,7 +15,7 @@ public class IncludedIntervaltypeLeftValidator implements IncludedIntervalValida
 	@Override
 	public boolean validator(Interval intervalComparador, Interval interval) {
 		boolean isMinimunIncluded = false;
-		boolean isMaximumIncluded = false;
+		
 		
 		if (interval.getIntervalType().equals(IntervalType.LEFT_OPENED)||interval.getIntervalType().equals(IntervalType.BOTH_OPENED)) {
 			isMinimunIncluded = bdComparator.areEquals(intervalComparador.getMinimum(), interval.getMinimum());
@@ -26,7 +26,7 @@ public class IncludedIntervaltypeLeftValidator implements IncludedIntervalValida
 			isMinimunIncluded = includeValueValidator.validate(intervalComparador, interval.getMinimum());
 		}
 		
-			isMaximumIncluded = includeValueValidator.validate(intervalComparador, interval.getMaximum());
+		boolean isMaximumIncluded = includeValueValidator.validate(intervalComparador, interval.getMaximum());
 		
 
 		return isMinimunIncluded && isMaximumIncluded;

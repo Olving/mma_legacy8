@@ -14,16 +14,14 @@ public class IncludedIntervaltypeUnopenedValidator implements IncludedIntervalVa
 	}
 	@Override
 	public boolean validator(Interval intervalComparador, Interval interval) {
-		boolean isMinimunIncluded = false;
-		boolean isMaximumIncluded = false;
+		
 		
 	
 		
-		
-			isMinimunIncluded = includeValueValidator.validate(intervalComparador, interval.getMinimum());
+		boolean isMinimunIncluded = includeValueValidator.validate(intervalComparador, interval.getMinimum());
 	
 	
-			isMaximumIncluded = includeValueValidator.validate(intervalComparador, interval.getMaximum());
+		boolean isMaximumIncluded = includeValueValidator.validate(intervalComparador, interval.getMaximum());
 	
 
 		return isMinimunIncluded && isMaximumIncluded;
