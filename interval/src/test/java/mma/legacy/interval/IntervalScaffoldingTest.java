@@ -37,54 +37,54 @@ public class IntervalScaffoldingTest {
 	public void validar_si_el_valor_esta_dentro_del_intervalo_del_tipo_ambos_abierto(){
 		Interval interval=new Interval(0,10,IntervalType.BOTH_OPENED);
 		
-		assertThat(intervalsApi.isWithinInterval(interval, 7), is(true));
+		assertThat(intervalsApi.isValueWithinInterval(interval, 7), is(true));
 		//Limites inferiores
-		assertThat(intervalsApi.isWithinInterval(interval, 0), is(false));
-		assertThat(intervalsApi.isWithinInterval(interval, 1), is(true));
+		assertThat(intervalsApi.isValueWithinInterval(interval, 0), is(false));
+		assertThat(intervalsApi.isValueWithinInterval(interval, 1), is(true));
 		//Limites superiores
-		assertThat(intervalsApi.isWithinInterval(interval, 10), is(false));
-		assertThat(intervalsApi.isWithinInterval(interval, 9), is(true));
+		assertThat(intervalsApi.isValueWithinInterval(interval, 10), is(false));
+		assertThat(intervalsApi.isValueWithinInterval(interval, 9), is(true));
 		
 	}
 	
 	@Test
 	public void validar_si_el_valor_esta_dentro_del_intervalo_tipo_izquierda_abierto(){
 		Interval interval=new Interval(0,10,IntervalType.LEFT_OPENED);
-		assertThat(intervalsApi.isWithinInterval(interval, 7), is(true));
+		assertThat(intervalsApi.isValueWithinInterval(interval, 7), is(true));
 		
 		//Limites inferiores
-		assertThat(intervalsApi.isWithinInterval(interval, 0), is(false));
-		assertThat(intervalsApi.isWithinInterval(interval, 1), is(true));
+		assertThat(intervalsApi.isValueWithinInterval(interval, 0), is(false));
+		assertThat(intervalsApi.isValueWithinInterval(interval, 1), is(true));
 		//Limites superiores
-		assertThat(intervalsApi.isWithinInterval(interval, 10), is(true));
-		assertThat(intervalsApi.isWithinInterval(interval, 11), is(false));
+		assertThat(intervalsApi.isValueWithinInterval(interval, 10), is(true));
+		assertThat(intervalsApi.isValueWithinInterval(interval, 11), is(false));
 		
 	}
 	@Test
 	public void validar_si_el_valor_esta_dentro_del_intervalo_tipo_derecho_abierto(){
 		Interval interval=new Interval(0,10,IntervalType.RIGHT_OPENED);
-		assertThat(intervalsApi.isWithinInterval(interval, 7), is(true));
+		assertThat(intervalsApi.isValueWithinInterval(interval, 7), is(true));
 		
 //		//Limites inferiores
-		assertThat(intervalsApi.isWithinInterval(interval, 0), is(true));
-		assertThat(intervalsApi.isWithinInterval(interval, -1), is(false));
+		assertThat(intervalsApi.isValueWithinInterval(interval, 0), is(true));
+		assertThat(intervalsApi.isValueWithinInterval(interval, -1), is(false));
 //		//Limites superiores
-		assertThat(intervalsApi.isWithinInterval(interval, 10), is(false));
-		assertThat(intervalsApi.isWithinInterval(interval, 9), is(true));
+		assertThat(intervalsApi.isValueWithinInterval(interval, 10), is(false));
+		assertThat(intervalsApi.isValueWithinInterval(interval, 9), is(true));
 		
 	}
 	
 	@Test
 	public void validar_si_el_valor_esta_dentro_del_intervalo_tipo_cerrado(){
 		Interval interval=new Interval(0,10,IntervalType.UNOPENED);
-		assertThat(intervalsApi.isWithinInterval(interval, 7), is(true));
+		assertThat(intervalsApi.isValueWithinInterval(interval, 7), is(true));
 		
 		//Limites inferiores
-		assertThat(intervalsApi.isWithinInterval(interval, 0), is(true));
-		assertThat(intervalsApi.isWithinInterval(interval, -1), is(false));
+		assertThat(intervalsApi.isValueWithinInterval(interval, 0), is(true));
+		assertThat(intervalsApi.isValueWithinInterval(interval, -1), is(false));
 		//Limites superiores
-		assertThat(intervalsApi.isWithinInterval(interval, 10), is(true));
-		assertThat(intervalsApi.isWithinInterval(interval, 11), is(false));
+		assertThat(intervalsApi.isValueWithinInterval(interval, 10), is(true));
+		assertThat(intervalsApi.isValueWithinInterval(interval, 11), is(false));
 		
 	}
 	
@@ -120,8 +120,27 @@ public class IntervalScaffoldingTest {
 		
 	}
 
+	@Test
+	public void validar_si_existe_interseccion_entre_dos_intervalos(){
+			Interval bothOpenedPivot = IntervalFactory.getInterval(20, 40, IntervalType.BOTH_OPENED);
+			assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(5, 15, IntervalType.BOTH_OPENED)), is(false));
+			assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(15, 25, IntervalType.BOTH_OPENED)), is(true));
+			
+			Interval leftOpenedPivot = IntervalFactory.getInterval(20, 40, IntervalType.LEFT_OPENED);
+			assertThat(intervalsApi.intersectsWith(leftOpenedPivot, IntervalFactory.getInterval(5, 15, IntervalType.BOTH_OPENED)), is(false));
+			assertThat(intervalsApi.intersectsWith(leftOpenedPivot, IntervalFactory.getInterval(15, 25, IntervalType.BOTH_OPENED)), is(true));
 
-	
+			
+			Interval rightOpenedPivot = IntervalFactory.getInterval(20, 40, IntervalType.RIGHT_OPENED);
+			assertThat(intervalsApi.intersectsWith(rightOpenedPivot, IntervalFactory.getInterval(5, 15, IntervalType.BOTH_OPENED)), is(false));
+			assertThat(intervalsApi.intersectsWith(rightOpenedPivot, IntervalFactory.getInterval(15, 25, IntervalType.BOTH_OPENED)), is(true));
+			
+			Interval unopenedPivot = IntervalFactory.getInterval(20, 40, IntervalType.UNOPENED);
+			assertThat(intervalsApi.intersectsWith(unopenedPivot, IntervalFactory.getInterval(5, 15, IntervalType.BOTH_OPENED)), is(false));
+			assertThat(intervalsApi.intersectsWith(unopenedPivot, IntervalFactory.getInterval(15, 25, IntervalType.BOTH_OPENED)), is(true));
+
+
+	}
 	
 
 }

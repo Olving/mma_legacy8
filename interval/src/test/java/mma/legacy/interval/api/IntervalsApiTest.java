@@ -54,40 +54,89 @@ public class IntervalsApiTest {
 		
 		
 		
-		assertThat(intervalsApi.isWithinInterval(bothInterval, -3), is(false));
-		assertThat(intervalsApi.isWithinInterval(leftInterval, -3), is(false));
-		assertThat(intervalsApi.isWithinInterval(unopenedInterval, -3), is(false));
-		assertThat(intervalsApi.isWithinInterval(rightInterval, -3), is(false));
+		assertThat(intervalsApi.isValueWithinInterval(bothInterval, -3), is(false));
+		assertThat(intervalsApi.isValueWithinInterval(leftInterval, -3), is(false));
+		assertThat(intervalsApi.isValueWithinInterval(unopenedInterval, -3), is(false));
+		assertThat(intervalsApi.isValueWithinInterval(rightInterval, -3), is(false));
 
 
 		
-		assertThat(intervalsApi.isWithinInterval(bothInterval, 0), is(false));
-		assertThat(intervalsApi.isWithinInterval(leftInterval, 0), is(false));
-		assertThat(intervalsApi.isWithinInterval(rightInterval, 0), is(true));
-		assertThat(intervalsApi.isWithinInterval(unopenedInterval, 0), is(true));
+		assertThat(intervalsApi.isValueWithinInterval(bothInterval, 0), is(false));
+		assertThat(intervalsApi.isValueWithinInterval(leftInterval, 0), is(false));
+		assertThat(intervalsApi.isValueWithinInterval(rightInterval, 0), is(true));
+		assertThat(intervalsApi.isValueWithinInterval(unopenedInterval, 0), is(true));
 		
 		
 		
-		assertThat(intervalsApi.isWithinInterval(bothInterval, 5), is(true));
-		assertThat(intervalsApi.isWithinInterval(leftInterval, 5), is(true));
-		assertThat(intervalsApi.isWithinInterval(rightInterval, 5), is(true));
-		assertThat(intervalsApi.isWithinInterval(unopenedInterval, 5), is(true));
+		assertThat(intervalsApi.isValueWithinInterval(bothInterval, 5), is(true));
+		assertThat(intervalsApi.isValueWithinInterval(leftInterval, 5), is(true));
+		assertThat(intervalsApi.isValueWithinInterval(rightInterval, 5), is(true));
+		assertThat(intervalsApi.isValueWithinInterval(unopenedInterval, 5), is(true));
 		
-		assertThat(intervalsApi.isWithinInterval(bothInterval, 10), is(false));
-		assertThat(intervalsApi.isWithinInterval(leftInterval, 10), is(true));
-		assertThat(intervalsApi.isWithinInterval(rightInterval, 10), is(false));
-		assertThat(intervalsApi.isWithinInterval(unopenedInterval, 10), is(true));
+		assertThat(intervalsApi.isValueWithinInterval(bothInterval, 10), is(false));
+		assertThat(intervalsApi.isValueWithinInterval(leftInterval, 10), is(true));
+		assertThat(intervalsApi.isValueWithinInterval(rightInterval, 10), is(false));
+		assertThat(intervalsApi.isValueWithinInterval(unopenedInterval, 10), is(true));
 		
-		assertThat(intervalsApi.isWithinInterval(bothInterval, 13), is(false));
-		assertThat(intervalsApi.isWithinInterval(leftInterval, 13), is(false));
-		assertThat(intervalsApi.isWithinInterval(rightInterval, 13), is(false));
-		assertThat(intervalsApi.isWithinInterval(unopenedInterval, 13), is(false));
+		assertThat(intervalsApi.isValueWithinInterval(bothInterval, 13), is(false));
+		assertThat(intervalsApi.isValueWithinInterval(leftInterval, 13), is(false));
+		assertThat(intervalsApi.isValueWithinInterval(rightInterval, 13), is(false));
+		assertThat(intervalsApi.isValueWithinInterval(unopenedInterval, 13), is(false));
 	
 	}
 
 
-//	@Test
-//	public void hasIntersectionTest() {
+
+
+	
+	@Test
+	public void hasIntersectiontPivotTypeBothTest() {
+
+		Interval bothOpenedPivot = IntervalFactory.getInterval(20, 40, IntervalType.BOTH_OPENED);
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(5, 15, IntervalType.BOTH_OPENED)), is(false));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(10, 20, IntervalType.BOTH_OPENED)), is(false));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(15, 25, IntervalType.BOTH_OPENED)), is(true));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(20, 30, IntervalType.BOTH_OPENED)), is(true));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(25, 35, IntervalType.BOTH_OPENED)), is(true));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(30, 40, IntervalType.BOTH_OPENED)), is(true));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(35, 45, IntervalType.BOTH_OPENED)), is(true));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(40, 50, IntervalType.BOTH_OPENED)), is(false));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(45, 55, IntervalType.BOTH_OPENED)), is(false));
+		
+		
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(5, 15, IntervalType.LEFT_OPENED)), is(false));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(10, 20, IntervalType.LEFT_OPENED)), is(false));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(15, 25, IntervalType.LEFT_OPENED)), is(true));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(20, 30, IntervalType.LEFT_OPENED)), is(true));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(25, 35, IntervalType.LEFT_OPENED)), is(true));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(30, 40, IntervalType.LEFT_OPENED)), is(true));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(35, 45, IntervalType.LEFT_OPENED)), is(true));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(40, 50, IntervalType.LEFT_OPENED)), is(false));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(45, 55, IntervalType.LEFT_OPENED)), is(false));
+		
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(5, 15, IntervalType.RIGHT_OPENED)), is(false));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(10, 20, IntervalType.RIGHT_OPENED)), is(false));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(15, 25, IntervalType.RIGHT_OPENED)), is(true));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(20, 30, IntervalType.RIGHT_OPENED)), is(true));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(25, 35, IntervalType.RIGHT_OPENED)), is(true));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(30, 40, IntervalType.RIGHT_OPENED)), is(true));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(35, 45, IntervalType.RIGHT_OPENED)), is(true));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(40, 50, IntervalType.RIGHT_OPENED)), is(false));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(45, 55, IntervalType.RIGHT_OPENED)), is(false));
+		
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(5, 15, IntervalType.UNOPENED)), is(false));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(10, 20, IntervalType.UNOPENED)), is(false));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(15, 25, IntervalType.UNOPENED)), is(true));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(20, 30, IntervalType.UNOPENED)), is(true));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(25, 35, IntervalType.UNOPENED)), is(true));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(30, 40, IntervalType.UNOPENED)), is(true));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(35, 45, IntervalType.UNOPENED)), is(true));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(40, 50, IntervalType.UNOPENED)), is(false));
+		assertThat(intervalsApi.intersectsWith(bothOpenedPivot, IntervalFactory.getInterval(45, 55, IntervalType.UNOPENED)), is(false));
+		
+
+}
+//	public void hasIntersectiontPivotTypeBothTest() {
 //
 //		Interval bothOpenedPivot = IntervalFactory.getInterval(20, 40, IntervalType.BOTH_OPENED);
 //
@@ -127,7 +176,10 @@ public class IntervalsApiTest {
 //		assertTrue(bothOpenedPivot.intersectsWith(IntervalFactory.getInterval(35, 45, IntervalType.UNOPENED)));
 //		assertFalse(bothOpenedPivot.intersectsWith(IntervalFactory.getInterval(40, 50, IntervalType.UNOPENED)));
 //		assertFalse(bothOpenedPivot.intersectsWith(IntervalFactory.getInterval(45, 55, IntervalType.UNOPENED)));
-//
+//}
+//	@Test
+//	public void hasIntersectiontPivotTypeBothTest() {
+	
 //		Interval leftOpenedPivot = IntervalFactory.getInterval(20, 40, IntervalType.LEFT_OPENED);
 //
 //		assertFalse(leftOpenedPivot.intersectsWith(IntervalFactory.getInterval(5, 15, IntervalType.BOTH_OPENED)));
@@ -166,6 +218,7 @@ public class IntervalsApiTest {
 //		assertTrue(leftOpenedPivot.intersectsWith(IntervalFactory.getInterval(35, 45, IntervalType.UNOPENED)));
 //		assertTrue(leftOpenedPivot.intersectsWith(IntervalFactory.getInterval(40, 50, IntervalType.UNOPENED)));
 //		assertFalse(leftOpenedPivot.intersectsWith(IntervalFactory.getInterval(45, 55, IntervalType.UNOPENED)));
+	
 //		Interval rightOpenedPivot = IntervalFactory.getInterval(20, 40, IntervalType.RIGHT_OPENED);
 //		assertFalse(rightOpenedPivot.intersectsWith(IntervalFactory.getInterval(5, 15, IntervalType.BOTH_OPENED)));
 //		assertFalse(rightOpenedPivot.intersectsWith(IntervalFactory.getInterval(10, 20, IntervalType.BOTH_OPENED)));
@@ -203,6 +256,7 @@ public class IntervalsApiTest {
 //		assertTrue(rightOpenedPivot.intersectsWith(IntervalFactory.getInterval(35, 45, IntervalType.UNOPENED)));
 //		assertFalse(rightOpenedPivot.intersectsWith(IntervalFactory.getInterval(40, 50, IntervalType.UNOPENED)));
 //		assertFalse(rightOpenedPivot.intersectsWith(IntervalFactory.getInterval(45, 55, IntervalType.UNOPENED)));
+	
 //		Interval unopenedPivot = IntervalFactory.getInterval(20, 40, IntervalType.UNOPENED);
 //		assertFalse(unopenedPivot.intersectsWith(IntervalFactory.getInterval(5, 15, IntervalType.BOTH_OPENED)));
 //		assertFalse(unopenedPivot.intersectsWith(IntervalFactory.getInterval(10, 20, IntervalType.BOTH_OPENED)));

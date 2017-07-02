@@ -6,23 +6,26 @@ import mma.legacy.interval.Interval;
 import mma.legacy.interval.api.calculator.MidPointCalculator;
 import mma.legacy.interval.api.validator.IncludeValueValidator;
 import mma.legacy.interval.api.validator.IncludedIntervalValidator;
+import mma.legacy.interval.api.validator.IntersectionIntervalsValidator;
 
 
 /**
- * Esta clase es el punto de entrada para el desarrollador Permite ejecutar todas las operaciones de Intervalos.
+ * Esta clase es el punto de entrada. Permite ejecutar todas las operaciones de Intervalos.
  * @author Agustin
  *
  */
 public class IntervalsApi {
 	
-private IncludeValueValidator withinIntervalValidator;
+private IncludeValueValidator includeValueValidator;
 private MidPointCalculator midPointCalculator;
 private IncludedIntervalValidator includedValidator;
+private IntersectionIntervalsValidator intersectionValidator;
 
 	public IntervalsApi() {
-		 this.withinIntervalValidator=new IncludeValueValidator();
+		 this.includeValueValidator=new IncludeValueValidator();
 		 this.midPointCalculator=new MidPointCalculator();
 		 this.includedValidator=new IncludedIntervalValidator();
+		 this.intersectionValidator=new IntersectionIntervalsValidator();
 	}
 
 	/**
@@ -38,9 +41,9 @@ private IncludedIntervalValidator includedValidator;
 	 * @param value
 	 * @return boolean
 	 */
-	public boolean isWithinInterval(Interval interval, double value) {
+	public boolean isValueWithinInterval(Interval interval, double value) {
 		
-		return withinIntervalValidator.validate(interval,  BigDecimal.valueOf(value));
+		return includeValueValidator.validate(interval,  BigDecimal.valueOf(value));
 	}
 
 	/**
@@ -60,35 +63,9 @@ private IncludedIntervalValidator includedValidator;
 	 * @return bolean
 	 */
 
-	public boolean intersectsWith(Interval interval) {
-//		if (minimum.compareTo(interval.maximum)==0) {
-//			switch (intervalType) {
-//			case BOTH_OPENED:
-//			case LEFT_OPENED:
-//				return false;
-//			case RIGHT_OPENED:
-//			case UNOPENED:
-//				return interval.intervalType == IntervalType.LEFT_OPENED || interval.intervalType == IntervalType.UNOPENED;
-//			default:
-//				assert false;
-//				return false;
-//			}
-//		}
-//		if (maximum.compareTo(interval.minimum)==0) {
-//			switch (intervalType) {
-//			case BOTH_OPENED:
-//			case RIGHT_OPENED:
-//				return false;
-//			case LEFT_OPENED:
-//			case UNOPENED:
-//				return interval.intervalType == IntervalType.RIGHT_OPENED || interval.intervalType == IntervalType.UNOPENED;
-//			default:
-//				assert false;
-//				return false;
-//			}
-//		}
-//		return this.isWithinInterval(interval.minimum.doubleValue()) || this.isWithinInterval(interval.maximum.doubleValue());
-	return false;
+	public boolean intersectsWith(Interval intervalComparador,Interval interval) {
+		return intersectionValidator.validate(intervalComparador, interval);
+
 	}
 	
 }
