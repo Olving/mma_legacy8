@@ -20,22 +20,38 @@ public class IncludeValueValidator  {
 	 * @return boolean
 	 */
 	public boolean validate(Interval interval,BigDecimal value) {
+		boolean result;
 		switch (interval.getIntervalType()) {
 		case BOTH_OPENED:
-			return bdComparator.isBiger(interval.getMinimum(),value)&& bdComparator.isSmaller(interval.getMaximum(),value);
+			result= bothValidate(interval, value);
 		case LEFT_OPENED:
-			return bdComparator.isBiger(interval.getMinimum(),value)  && bdComparator.isSmallerOrEquals(interval.getMaximum(),value);
+			result=  leftValidate(interval, value);
 		case RIGHT_OPENED:
-			return bdComparator.isBigerOrEquals(interval.getMinimum(),value)  && bdComparator.isSmaller(interval.getMaximum(),value);
+			result=  rightValidate(interval, value);
 		case UNOPENED:
-			return bdComparator.isBigerOrEquals(interval.getMinimum(),value)  && bdComparator.isSmallerOrEquals(interval.getMaximum(),value);
+			result=  unopenedValidate(interval, value);
 		default:
-			return false;
+			result=  false;
 		}
+		
+		return result;
 	}
 	
-	
+	private boolean bothValidate(Interval interval,BigDecimal value){
+		return bdComparator.isBiger(interval.getMinimum(),value)&& bdComparator.isSmaller(interval.getMaximum(),value);
+	}
 
+	private boolean leftValidate(Interval interval,BigDecimal value){
+		return bdComparator.isBiger(interval.getMinimum(),value)  && bdComparator.isSmallerOrEquals(interval.getMaximum(),value);
+	}
+	
+	private boolean rightValidate(Interval interval,BigDecimal value){
+		return bdComparator.isBigerOrEquals(interval.getMinimum(),value)  && bdComparator.isSmaller(interval.getMaximum(),value);
+	}
+	
+	private boolean unopenedValidate(Interval interval,BigDecimal value){
+		return bdComparator.isBigerOrEquals(interval.getMinimum(),value)  && bdComparator.isSmallerOrEquals(interval.getMaximum(),value);
+	}
 	
 
 }
