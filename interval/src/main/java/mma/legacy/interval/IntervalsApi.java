@@ -17,23 +17,72 @@ private IncludedIntervalValidator includedValidator;
 		 this.includedValidator=new IncludedIntervalValidator();
 	}
 
-	
-	public BigDecimal calcutetMidPoint(Interval interval){
-		return midPointCalculator.calculate(interval);
+	/**
+	 * Calcula el punto medio de un intervalo
+	 * @return double
+	 */
+	public double calcutetMidPoint(Interval interval){
+		return midPointCalculator.calculate(interval).doubleValue();
 	}
-	
-	public boolean isWithinInterval(Interval interval, BigDecimal value) {
+	/**
+	 * Valida que el parametro de entra value
+	 * este dentro de los limites del intervalo
+	 * @param value
+	 * @throws NulPointerException
+	 * @return boolean
+	 */
+	public boolean isWithinInterval(Interval interval, double value) {
 		
-		return withinIntervalValidator.validate(interval, value);
+		return withinIntervalValidator.validate(interval, new BigDecimal(value));
 	}
 
-
+	/**
+	 * Verifica que un intervalo este dentro de otro intervalo
+	 * @param interval
+	 * @throws NulPointerException
+	 * @return boolean
+	 */
 	public boolean isIncluidedInterval(Interval intervalComparador, Interval interval) {
 		return includedValidator.validator(intervalComparador, interval);
 	} 
 	
 
 
-	
+	/**
+	 * Verifica si existe interseccion entre dos intervalos
+	 * @param interval
+	 * @return bolean
+	 */
+
+	public boolean intersectsWith(Interval interval) {
+//		if (minimum.compareTo(interval.maximum)==0) {
+//			switch (intervalType) {
+//			case BOTH_OPENED:
+//			case LEFT_OPENED:
+//				return false;
+//			case RIGHT_OPENED:
+//			case UNOPENED:
+//				return interval.intervalType == IntervalType.LEFT_OPENED || interval.intervalType == IntervalType.UNOPENED;
+//			default:
+//				assert false;
+//				return false;
+//			}
+//		}
+//		if (maximum.compareTo(interval.minimum)==0) {
+//			switch (intervalType) {
+//			case BOTH_OPENED:
+//			case RIGHT_OPENED:
+//				return false;
+//			case LEFT_OPENED:
+//			case UNOPENED:
+//				return interval.intervalType == IntervalType.RIGHT_OPENED || interval.intervalType == IntervalType.UNOPENED;
+//			default:
+//				assert false;
+//				return false;
+//			}
+//		}
+//		return this.isWithinInterval(interval.minimum.doubleValue()) || this.isWithinInterval(interval.maximum.doubleValue());
+	return false;
+	}
 	
 }

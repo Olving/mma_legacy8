@@ -10,22 +10,7 @@ public class IncludeValueValidator  {
 		bdComparator=new BigDecimalComparator();
 	}
 	private static final Logger LOGGER = Logger.getLogger(IncludeValueValidator.class.getName());
-//	public boolean isWithinInterval(Interval interval,double value) {
-//	LOGGER.info("Entro en el método isWithinInterval");
-//	switch (interval.getIntervalType()) {
-//	case BOTH_OPENED:
-//		return interval.getMinimum() < value && value < interval.getMaximum();
-//	case LEFT_OPENED:
-//		return interval.getMinimum() < value && value <= interval.getMaximum();
-//	case RIGHT_OPENED:
-//		return interval.getMinimum() <= value && value < interval.getMaximum();
-//	case UNOPENED:
-//		return interval.getMinimum() <= value && value <= interval.getMaximum();
-//	default:
-//		return false;
-//	}
-//}
-//
+
 	
 	/**
 	 * Valida que el parametro de entra value
