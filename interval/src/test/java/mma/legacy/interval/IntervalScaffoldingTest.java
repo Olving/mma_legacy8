@@ -4,6 +4,7 @@ package mma.legacy.interval;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -57,10 +58,10 @@ public class IntervalScaffoldingTest {
 		Interval interval=new Interval(0,10,IntervalType.RIGHT_OPENED);
 		assertThat(interval.isWithinInterval(7), is(true));
 		
-		//Limites inferiores
+//		//Limites inferiores
 		assertThat(interval.isWithinInterval(0), is(true));
 		assertThat(interval.isWithinInterval(-1), is(false));
-		//Limites superiores
+//		//Limites superiores
 		assertThat(interval.isWithinInterval(10), is(false));
 		assertThat(interval.isWithinInterval(9), is(true));
 		
@@ -114,10 +115,9 @@ public class IntervalScaffoldingTest {
 
 	@Test
 	public void myTest(){
-		Interval intervalComparador=new Interval(0,10,IntervalType.UNOPENED);
-		Interval interval=new Interval(0,10,IntervalType.UNOPENED);
-		IntervalsComparator comparator=new IntervalsComparator();
-		boolean result=comparator.isIncluidedInterval(intervalComparador,interval);
+		Interval leftOpenedPivot = IntervalFactory.getInterval(20, 35, IntervalType.LEFT_OPENED);
+		assertTrue(leftOpenedPivot.isIncludedInterval(IntervalFactory.getInterval(20, 25, IntervalType.LEFT_OPENED)));
+
 	}
 	
 	

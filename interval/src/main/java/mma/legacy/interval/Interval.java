@@ -19,7 +19,8 @@ public class Interval {
 								// abierto derecha , abierto izquierda, los 2 abiertos ,cerrado 
 	
 	
-	private IntervalsComparator comparator;
+	private IntervalsApi calculatorApi;
+	
 	
 	private static final Logger LOGGER = Logger.getLogger(Interval.class.getName());
 
@@ -37,21 +38,21 @@ public class Interval {
 		this.minimum = BigDecimal.valueOf(minimum);
 		this.maximum = BigDecimal.valueOf(maximum);
 		this.intervalType=intervalType;
- 		comparator=new IntervalsComparator();
+ 		calculatorApi=new IntervalsApi();
+ 		
 		LOGGER.info("Objeto Interval creado");
 	}	
 
 	
 	
 
-	public double getMinimum() {
-		return minimum.doubleValue();
+	public BigDecimal getMinimum() {
+		return minimum;
 	}
 
 
-
-	public double getMaximum() {
-		return maximum.doubleValue();
+	public BigDecimal getMaximum() {
+		return maximum;
 	}
 
 
@@ -69,7 +70,7 @@ public class Interval {
 	 */
 	public double getMidPoint() {
 	
-		return(maximum.doubleValue()+ minimum.doubleValue()) / 2;
+		return calculatorApi.calcutetMidPoint(this).doubleValue();
 	}
 
 	/**
@@ -81,7 +82,7 @@ public class Interval {
 	 */
 	public boolean isWithinInterval(double value) {
 		LOGGER.info("Entro en el método isWithinInterval");
-		return comparator.isWithinInterval(this, value);
+		return calculatorApi.isWithinInterval(this, new BigDecimal(value));
 	}
 
 	/**
@@ -91,7 +92,7 @@ public class Interval {
 	 * @return boolean
 	 */
 	public boolean isIncludedInterval(Interval interval) {
-		return comparator.isIncluidedInterval(this, interval);
+		return calculatorApi.isIncluidedInterval(this, interval);
 	}
 
 	
