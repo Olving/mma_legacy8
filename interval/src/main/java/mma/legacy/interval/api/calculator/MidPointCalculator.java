@@ -8,9 +8,11 @@ public class MidPointCalculator {
 	
 	
 	public BigDecimal calculate(Interval interval) {
-		BigDecimal midPoint=(interval.getMinimum().add(interval.getMaximum()).divide( BigDecimal.valueOf(2d)));
+		if(interval!=null){
+			return (interval.getMinimum().add(interval.getMaximum()).divide( BigDecimal.valueOf(2d)));
+		}
 		
-		return midPoint;
+		return BigDecimal.valueOf(0);
 	}
 
 }
