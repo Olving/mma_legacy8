@@ -1,7 +1,6 @@
 		package mma.legacy.interval.api.validator;
 
 import mma.legacy.interval.Interval;
-import mma.legacy.interval.api.comparator.BigDecimalComparator;
 
 public class IncludedIntervaltypeUnopenedValidator implements IncludedIntervalValidatorStrategy{
 
