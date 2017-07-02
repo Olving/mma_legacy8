@@ -3,7 +3,6 @@ mma\legacy\interval\BigDecimalComparator.class
 mma\legacy\interval\included\validator\IncludedIntervalValidatorStrategy.class
 mma\legacy\interval\included\validator\IncludedIntervaltypeRightValidator.class
 mma\legacy\interval\App.class
-mma\legacy\interval\Interval$1.class
 mma\legacy\interval\IntervalsApi.class
 mma\legacy\interval\included\validator\IncludedIntervaltypeBothValidator.class
 mma\legacy\interval\IntervalFactory.class

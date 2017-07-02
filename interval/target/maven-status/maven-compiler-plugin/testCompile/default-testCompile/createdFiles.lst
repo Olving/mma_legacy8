@@ -1,7 +1,5 @@
-mma\legacy\interval\AllTest.class
 mma\legacy\interval\IntervalTest.class
 mma\legacy\interval\included\validator\IncludedIntervaltypeUnopenedValidatorTest.class
-mma\legacy\interval\AppTest.class
 mma\legacy\interval\IntervalsTestCreator.class
 mma\legacy\interval\included\validator\IncludedIntervaltypeBothValidatorTest.class
 mma\legacy\interval\included\validator\IncludedIntervaltypeRightValidatorTest.class
