@@ -8,6 +8,7 @@ H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\api\validator\Incl
 H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\Interval.java
 H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\api\validator\IncludeValueValidator.java
 H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\api\comparator\BigDecimalComparator.java
+H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\api\validator\IntersectionIntervalsValidator.java
 H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\api\validator\IncludedIntervaltypeBothValidator.java
 H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\api\validator\IncludedIntervaltypeRightValidator.java
 H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\api\validator\IncludedIntervalValidatorStrategy.java

@@ -10,6 +10,7 @@ mma\legacy\interval\IntervalType.class
 mma\legacy\interval\api\calculator\MidPointCalculator.class
 mma\legacy\interval\api\comparator\BigDecimalComparator.class
 mma\legacy\interval\api\validator\IncludedIntervalValidator$1.class
+mma\legacy\interval\api\validator\IntersectionIntervalsValidator.class
 mma\legacy\interval\api\validator\IncludedIntervalValidatorStrategy.class
 mma\legacy\interval\api\validator\IncludedIntervaltypeUnopenedValidator.class
 mma\legacy\interval\api\validator\IncludedIntervaltypeBothValidator.class
