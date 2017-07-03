@@ -60,7 +60,8 @@ private IntersectionIntervalsValidator intersectionValidator;
 	/**
 	 * Verifica si existe interseccion entre dos intervalos
 	 * @param interval
-	 * @return bolean
+	 * @param intervalComparador
+	 * @return boolean
 	 */
 
 	public boolean intersectsWith(Interval intervalComparador,Interval interval) {
