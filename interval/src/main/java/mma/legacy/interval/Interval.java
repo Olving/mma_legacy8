@@ -4,10 +4,8 @@ import java.math.BigDecimal;
 import java.util.logging.Logger;
 
 /**
- * Clase para el ejemplo de trabajo con Legacy
- * 
- * @author Agustin Controla operaciones sobre intervalos que pudeen ser abiertos
- *         o cerrados
+ * Clase para el ejemplo de trabajo con Legacy.Permite definir un Intervalo 
+ * @author Agustin 
  */
 public class Interval {
 
@@ -32,7 +30,7 @@ public class Interval {
 	 * @param opening
 	 * 
 	 */
-	public Interval(double minimum, double maximum, IntervalType intervalType) {
+	protected Interval(double minimum, double maximum, IntervalType intervalType) {
 		this.minimum = BigDecimal.valueOf(minimum);
 		this.maximum = BigDecimal.valueOf(maximum);
 		this.intervalType=intervalType;		
