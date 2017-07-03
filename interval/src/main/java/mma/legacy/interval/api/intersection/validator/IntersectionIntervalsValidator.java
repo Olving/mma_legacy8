@@ -39,9 +39,9 @@ public class IntersectionIntervalsValidator {
 		case RIGHT_OPENED:
 			return rightValidate(intervalComparador, interval);
 		
-		case BOTH_OPENED:{
+		case BOTH_OPENED:
 			return rightValidate(intervalComparador, interval)&&leftValidate(intervalComparador, interval);
-		}	
+		
 		default:
 			return commonValidate(intervalComparador, interval);
 		}
