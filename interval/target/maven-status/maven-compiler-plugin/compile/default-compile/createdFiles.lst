@@ -3,6 +3,7 @@ mma\legacy\interval\api\validator\IncludedIntervaltypeLeftValidator.class
 mma\legacy\interval\api\validator\IncludedIntervalValidator.class
 mma\legacy\interval\api\validator\IncludeValueValidator.class
 mma\legacy\interval\api\validator\IncludedIntervaltypeRightValidator.class
+mma\legacy\interval\api\validator\IntersectionIntervalsValidator$1.class
 mma\legacy\interval\api\validator\IncludeValueValidator$1.class
 mma\legacy\interval\IntervalFactory.class
 mma\legacy\interval\Interval.class
