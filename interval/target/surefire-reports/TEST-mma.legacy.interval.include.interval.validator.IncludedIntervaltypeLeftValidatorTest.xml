@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="7" failures="0" name="mma.legacy.interval.IntervalScaffoldingTest" time="0" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="mma.legacy.interval.include.interval.validator.IncludedIntervaltypeLeftValidatorTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Workspaces\Synectic\Leviathan\products\Java\Framework\jre\bin"/>
@@ -61,11 +61,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="mma.legacy.interval.IntervalScaffoldingTest" name="calcula_el_punto_medio_de_un_intervalo" time="0"/>
-  <testcase classname="mma.legacy.interval.IntervalScaffoldingTest" name="validar_si_el_valor_esta_dentro_del_intervalo_tipo_izquierda_abierto" time="0"/>
-  <testcase classname="mma.legacy.interval.IntervalScaffoldingTest" name="validar_si_el_valor_esta_dentro_del_intervalo_tipo_cerrado" time="0"/>
-  <testcase classname="mma.legacy.interval.IntervalScaffoldingTest" name="validar_si_existe_interseccion_entre_dos_intervalos" time="0"/>
-  <testcase classname="mma.legacy.interval.IntervalScaffoldingTest" name="validar_si_hay_esta_incluido_en_un_intervalo" time="0"/>
-  <testcase classname="mma.legacy.interval.IntervalScaffoldingTest" name="validar_si_el_valor_esta_dentro_del_intervalo_tipo_derecho_abierto" time="0"/>
-  <testcase classname="mma.legacy.interval.IntervalScaffoldingTest" name="validar_si_el_valor_esta_dentro_del_intervalo_del_tipo_ambos_abierto" time="0"/>
+  <testcase classname="mma.legacy.interval.include.interval.validator.IncludedIntervaltypeLeftValidatorTest" name="isIncludedIntervalTypeLeftBothTest" time="0"/>
+  <testcase classname="mma.legacy.interval.include.interval.validator.IncludedIntervaltypeLeftValidatorTest" name="isIncludedIntervalTypeLeftUopenedTest" time="0"/>
+  <testcase classname="mma.legacy.interval.include.interval.validator.IncludedIntervaltypeLeftValidatorTest" name="isIncludedIntervalTypeLeftTest" time="0"/>
+  <testcase classname="mma.legacy.interval.include.interval.validator.IncludedIntervaltypeLeftValidatorTest" name="isIncludedIntervalTypeLeftRightTest" time="0"/>
 </testsuite>
