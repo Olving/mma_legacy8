@@ -2,6 +2,10 @@ package mma.legacy.interval.api.include.interval.validator;
 
 import mma.legacy.interval.Interval;
 
+/**
+ * Clase con la responsabilidad de validar si un intervalo esta dentro de otro intervalo 
+ * @author JosepPC 
+ */
 public class IncludedIntervalValidator implements IncludedIntervalValidatorStrategy{
 	
 	private IncludedIntervalValidatorStrategy bothValidator;

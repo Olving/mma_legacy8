@@ -4,6 +4,10 @@ import java.math.BigDecimal;
 
 import mma.legacy.interval.Interval;
 
+/**
+ * Clase con la responsabilidad de calcular el punto medio de un intervalo 
+ * @author JosepPC 
+ */
 public class MidPointCalculator {
 	
 	

@@ -1,7 +1,10 @@
 package mma.legacy.interval.api.intersection.validator;
 
 import mma.legacy.interval.Interval;
-
+/**
+ * Clase con la responsabilidad de validar la interseccion entre dos intervalos
+ * @author JosepPC 
+ */
 public class IntersectionIntervalsValidator implements IntersectionIntervalsValiatorStrategy {
 
 	private IntersectionIntervalsValiatorStrategy lefttValidator;

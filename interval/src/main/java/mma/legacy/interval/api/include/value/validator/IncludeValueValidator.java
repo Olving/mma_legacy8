@@ -4,6 +4,10 @@ import java.math.BigDecimal;
 
 import mma.legacy.interval.Interval;
 
+/**
+ * Clase con la responsabilidad de validar si un valor esta dentro de un intervalo 
+ * @author JosepPC 
+ */
 public class IncludeValueValidator  implements IncludeValueValidatorStategy{
 	private IncludeValueValidatorStategy bothValidator;
 	private IncludeValueValidatorStategy unopenedValidator;

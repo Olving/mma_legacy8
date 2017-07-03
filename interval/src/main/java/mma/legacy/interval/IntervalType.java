@@ -14,7 +14,4 @@ public enum IntervalType {
 	UNOPENED;
 
 	
-	public boolean isEquals(IntervalType type){
-		return this.equals(type);
-	}
 }
