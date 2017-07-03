@@ -1,8 +1,6 @@
 package mma.legacy.interval.api.intersection.validator;
 
 import mma.legacy.interval.Interval;
-import mma.legacy.interval.api.comparator.BigDecimalComparator;
-import mma.legacy.interval.api.include.value.validator.IncludeValueValidator;
 
 public class IntersectionIntervalsValidator implements IntersectionIntervalsValiatorStrategy {
 
