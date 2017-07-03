@@ -33,27 +33,14 @@ public class IntersectionIntervalsValidator {
 	
 	private boolean unopenedValidate(Interval intervalComparador, Interval interval) {
 		switch (interval.getIntervalType()) {
-		case LEFT_OPENED:{
-			
-			if(bdComparator.areEquals(intervalComparador.getMaximum(), interval.getMinimum())){
-				return false;
-			}
-			return commonValidate(intervalComparador, interval);
-		}
-		case RIGHT_OPENED:{
-			
-			if(bdComparator.areEquals(intervalComparador.getMinimum(), interval.getMaximum())){
-				return false;
-			}
-			return commonValidate(intervalComparador, interval);
-		}
+		case LEFT_OPENED:
+			return leftValidate(intervalComparador, interval);
+		
+		case RIGHT_OPENED:
+			return rightValidate(intervalComparador, interval);
+		
 		case BOTH_OPENED:{
-			if(bdComparator.areEquals(intervalComparador.getMinimum(), interval.getMaximum())){
-				return false;
-			}
-			if(bdComparator.areEquals(intervalComparador.getMaximum(), interval.getMinimum())){
-				return false;
-			}
+			return rightValidate(intervalComparador, interval)&&leftValidate(intervalComparador, interval);
 		}	
 		default:
 			return commonValidate(intervalComparador, interval);
@@ -61,6 +48,9 @@ public class IntersectionIntervalsValidator {
 		
 	}
 
+	
+	
+	
 	private boolean rightValidate(Interval intervalComparador,Interval interval){
 		switch (interval.getIntervalType()) {
 		case RIGHT_OPENED:
