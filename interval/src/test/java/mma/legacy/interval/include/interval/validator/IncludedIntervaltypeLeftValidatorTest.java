@@ -1,4 +1,4 @@
-package mma.legacy.interval.included.validator;
+package mma.legacy.interval.include.interval.validator;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -9,8 +9,8 @@ import org.junit.Test;
 import mma.legacy.interval.Interval;
 import mma.legacy.interval.IntervalFactory;
 import mma.legacy.interval.IntervalType;
-import mma.legacy.interval.api.validator.IncludedIntervalValidatorStrategy;
-import mma.legacy.interval.api.validator.IncludedIntervaltypeLeftValidator;
+import mma.legacy.interval.api.include.interval.validator.IncludedIntervalValidatorStrategy;
+import mma.legacy.interval.api.include.interval.validator.IncludedIntervaltypeLeftValidator;
 
 public class IncludedIntervaltypeLeftValidatorTest {
 	

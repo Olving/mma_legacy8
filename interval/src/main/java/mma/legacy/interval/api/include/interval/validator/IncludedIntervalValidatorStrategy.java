@@ -1,4 +1,4 @@
-package mma.legacy.interval.api.validator;
+package mma.legacy.interval.api.include.interval.validator;
 
 import mma.legacy.interval.Interval;
 

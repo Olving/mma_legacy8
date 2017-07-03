@@ -1,4 +1,4 @@
-package mma.legacy.interval.api.validator;
+package mma.legacy.interval.api.include.value.validator;
 
 import java.math.BigDecimal;
 

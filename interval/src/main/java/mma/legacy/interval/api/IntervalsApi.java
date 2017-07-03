@@ -4,13 +4,13 @@ import java.math.BigDecimal;
 
 import mma.legacy.interval.Interval;
 import mma.legacy.interval.api.calculator.MidPointCalculator;
-import mma.legacy.interval.api.validator.IncludeValueValidator;
-import mma.legacy.interval.api.validator.IncludedIntervalValidator;
-import mma.legacy.interval.api.validator.IntersectionIntervalsValidator;
+import mma.legacy.interval.api.include.interval.validator.IncludedIntervalValidator;
+import mma.legacy.interval.api.include.value.validator.IncludeValueValidator;
+import mma.legacy.interval.api.intersection.validator.IntersectionIntervalsValidator;
 
 
 /**
- * Esta clase es el punto de entrada. Permite ejecutar todas las operaciones de Intervalos.
+ * Esta clase es el punto de entrada. Permite ejecutar todas las operaciones relacionadas con  Intervalos.
  * @author Agustin
  *
  */
