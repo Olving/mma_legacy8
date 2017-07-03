@@ -3,13 +3,20 @@ package mma.legacy.interval.api.include.value.validator;
 import java.math.BigDecimal;
 
 import mma.legacy.interval.Interval;
-import mma.legacy.interval.api.comparator.BigDecimalComparator;
 
-public class IncludeValueValidator  {
-	BigDecimalComparator bdComparator;
+public class IncludeValueValidator  implements IncludeValueValidatorStategy{
+	private IncludeValueValidatorStategy bothValidator;
+	private IncludeValueValidatorStategy unopenedValidator;
+	private IncludeValueValidatorStategy leftValidator;
+	private IncludeValueValidatorStategy rightValidator;
+	
 	public IncludeValueValidator() {
 		
-		bdComparator=new BigDecimalComparator();
+		bothValidator=new IncludeValueTypeBothValidator();
+		unopenedValidator=new IncludeValueTypeUnopenedValidator();
+		rightValidator=new IncludeValueTypeRightValidator();
+		leftValidator=new IncludeValueTypeLeftValidator();
+		
 	}
 
 	/**
@@ -23,33 +30,18 @@ public class IncludeValueValidator  {
 		
 		switch (interval.getIntervalType()) {
 		case BOTH_OPENED:
-			return bothValidate(interval, value);
+			return bothValidator.validate(interval, value);
 		case LEFT_OPENED:
-			return leftValidate(interval, value);
+			return leftValidator.validate(interval, value);
 		case RIGHT_OPENED:
-			return rightValidate(interval, value);
+			return rightValidator.validate(interval, value);
 		case UNOPENED:
-			return unopenedValidate(interval, value);
+			return unopenedValidator.validate(interval, value);
 		default:
 			return false;
 		}
 	}
 	
-	private boolean bothValidate(Interval interval,BigDecimal value){
-		return bdComparator.isBiger(interval.getMinimum(),value)&& bdComparator.isSmaller(interval.getMaximum(),value);
-	}
 
-	private boolean leftValidate(Interval interval,BigDecimal value){
-		return bdComparator.isBiger(interval.getMinimum(),value)  && bdComparator.isSmallerOrEquals(interval.getMaximum(),value);
-	}
 	
-	private boolean rightValidate(Interval interval,BigDecimal value){
-		return bdComparator.isBigerOrEquals(interval.getMinimum(),value)  && bdComparator.isSmaller(interval.getMaximum(),value);
-	}
-	
-	private boolean unopenedValidate(Interval interval,BigDecimal value){
-		return bdComparator.isBigerOrEquals(interval.getMinimum(),value)  && bdComparator.isSmallerOrEquals(interval.getMaximum(),value);
-	}
-	
-
 }
