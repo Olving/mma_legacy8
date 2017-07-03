@@ -3,6 +3,7 @@ package mma.legacy.interval.api.include.value.validator;
 import java.math.BigDecimal;
 
 import mma.legacy.interval.Interval;
+import mma.legacy.interval.IntervalType;
 import mma.legacy.interval.api.comparator.BigDecimalComparator;
 
 public class IncludeValueValidator  {
@@ -21,18 +22,22 @@ public class IncludeValueValidator  {
 	 */
 	public boolean validate(Interval interval,BigDecimal value) {
 		
-		switch (interval.getIntervalType()) {
-		case BOTH_OPENED:
+		if (interval.getIntervalType().isEquals(IntervalType.BOTH_OPENED)) {
 			return bothValidate(interval, value);
-		case LEFT_OPENED:
-			return leftValidate(interval, value);
-		case RIGHT_OPENED:
-			return rightValidate(interval, value);
-		case UNOPENED:
-			return unopenedValidate(interval, value);
-		default:
-			return false;
 		}
+		
+		if (interval.getIntervalType().isEquals(IntervalType.LEFT_OPENED)) {
+			return leftValidate(interval, value);
+		}
+		if (interval.getIntervalType().isEquals(IntervalType.RIGHT_OPENED)) {
+			return rightValidate(interval, value);
+		}
+		if (interval.getIntervalType().isEquals(IntervalType.UNOPENED)) {
+			return unopenedValidate(interval, value);
+		}
+		
+			return false;
+		
 	}
 	
 	private boolean bothValidate(Interval interval,BigDecimal value){

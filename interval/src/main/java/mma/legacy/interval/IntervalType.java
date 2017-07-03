@@ -13,4 +13,8 @@ public enum IntervalType {
 	BOTH_OPENED, 
 	UNOPENED;
 
+	
+	public boolean isEquals(IntervalType type){
+		return this.equals(type);
+	}
 }
