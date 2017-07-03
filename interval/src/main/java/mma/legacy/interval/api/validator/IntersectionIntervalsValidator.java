@@ -74,7 +74,6 @@ public class IntersectionIntervalsValidator {
 	
 	}
 	
-	
 	private boolean leftValidate(Interval intervalComparador,Interval interval){
 		switch (interval.getIntervalType()) {
 		case LEFT_OPENED:
