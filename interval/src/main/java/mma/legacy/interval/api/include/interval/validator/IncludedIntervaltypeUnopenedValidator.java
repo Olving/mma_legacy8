@@ -12,20 +12,11 @@ public class IncludedIntervaltypeUnopenedValidator implements IncludedIntervalVa
 		this.includeValueValidator = new IncludeValueValidator();
 	}
 	@Override
-	public boolean validator(Interval intervalComparador, Interval interval) {
-		
-		
-	
-		
+	public boolean validate(Interval intervalComparador, Interval interval) {
 		boolean isMinimunIncluded = includeValueValidator.validate(intervalComparador, interval.getMinimum());
-	
-	
 		boolean isMaximumIncluded = includeValueValidator.validate(intervalComparador, interval.getMaximum());
-	
-
 		return isMinimunIncluded && isMaximumIncluded;
 				
-	
 	}
 
 }

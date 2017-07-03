@@ -34,26 +34,26 @@ public class IncludedIntervaltypeUnopenedValidatorTest {
 	public void isIncludedIntervalTypeUnopenedTest() {	
 		
 		List<Interval> intervals=IntervalsTestCreator.create(IntervalType.BOTH_OPENED);
-		assertFalse(unopenedValidator.validator(unOpenedPivot,intervals.get(0)));
-		assertFalse(unopenedValidator.validator(unOpenedPivot,intervals.get(1)));
-		assertTrue(unopenedValidator.validator(unOpenedPivot,intervals.get(2)));
-		assertTrue(unopenedValidator.validator(unOpenedPivot,intervals.get(3)));
-		assertTrue(unopenedValidator.validator(unOpenedPivot,intervals.get(4)));
-		assertFalse(unopenedValidator.validator(unOpenedPivot,intervals.get(5)));
-		assertFalse(unopenedValidator.validator(unOpenedPivot,intervals.get(6)));
+		assertFalse(unopenedValidator.validate(unOpenedPivot,intervals.get(0)));
+		assertFalse(unopenedValidator.validate(unOpenedPivot,intervals.get(1)));
+		assertTrue(unopenedValidator.validate(unOpenedPivot,intervals.get(2)));
+		assertTrue(unopenedValidator.validate(unOpenedPivot,intervals.get(3)));
+		assertTrue(unopenedValidator.validate(unOpenedPivot,intervals.get(4)));
+		assertFalse(unopenedValidator.validate(unOpenedPivot,intervals.get(5)));
+		assertFalse(unopenedValidator.validate(unOpenedPivot,intervals.get(6)));
 		
 	}
 
 	@Test
 	public void isIncludedIntervalTypeUnopenedLeftTest() {
 		List<Interval> intervals=IntervalsTestCreator.create(IntervalType.LEFT_OPENED);
-		assertFalse(unopenedValidator.validator(unOpenedPivot,intervals.get(0)));
-		assertFalse(unopenedValidator.validator(unOpenedPivot,intervals.get(1)));
-		assertTrue(unopenedValidator.validator(unOpenedPivot,intervals.get(2)));
-		assertTrue(unopenedValidator.validator(unOpenedPivot,intervals.get(3)));
-		assertTrue(unopenedValidator.validator(unOpenedPivot,intervals.get(4)));
-		assertFalse(unopenedValidator.validator(unOpenedPivot,intervals.get(5)));
-		assertFalse(unopenedValidator.validator(unOpenedPivot,intervals.get(6)));
+		assertFalse(unopenedValidator.validate(unOpenedPivot,intervals.get(0)));
+		assertFalse(unopenedValidator.validate(unOpenedPivot,intervals.get(1)));
+		assertTrue(unopenedValidator.validate(unOpenedPivot,intervals.get(2)));
+		assertTrue(unopenedValidator.validate(unOpenedPivot,intervals.get(3)));
+		assertTrue(unopenedValidator.validate(unOpenedPivot,intervals.get(4)));
+		assertFalse(unopenedValidator.validate(unOpenedPivot,intervals.get(5)));
+		assertFalse(unopenedValidator.validate(unOpenedPivot,intervals.get(6)));
 		
 		
 	}
@@ -61,26 +61,26 @@ public class IncludedIntervaltypeUnopenedValidatorTest {
 	@Test
 	public void isIncludedIntervalTypeUnopenedRightTest() {
 		List<Interval> intervals=IntervalsTestCreator.create(IntervalType.RIGHT_OPENED);
-		assertFalse(unopenedValidator.validator(unOpenedPivot,intervals.get(0)));
-		assertFalse(unopenedValidator.validator(unOpenedPivot,intervals.get(1)));
-		assertTrue(unopenedValidator.validator(unOpenedPivot,intervals.get(2)));
-		assertTrue(unopenedValidator.validator(unOpenedPivot,intervals.get(3)));
-		assertTrue(unopenedValidator.validator(unOpenedPivot,intervals.get(4)));
-		assertFalse(unopenedValidator.validator(unOpenedPivot,intervals.get(5)));
-		assertFalse(unopenedValidator.validator(unOpenedPivot,intervals.get(6)));
+		assertFalse(unopenedValidator.validate(unOpenedPivot,intervals.get(0)));
+		assertFalse(unopenedValidator.validate(unOpenedPivot,intervals.get(1)));
+		assertTrue(unopenedValidator.validate(unOpenedPivot,intervals.get(2)));
+		assertTrue(unopenedValidator.validate(unOpenedPivot,intervals.get(3)));
+		assertTrue(unopenedValidator.validate(unOpenedPivot,intervals.get(4)));
+		assertFalse(unopenedValidator.validate(unOpenedPivot,intervals.get(5)));
+		assertFalse(unopenedValidator.validate(unOpenedPivot,intervals.get(6)));
 		
 	}
 
 	@Test
 	public void isIncludedIntervalTypeUnopenedtTest() {
 		List<Interval> intervals=IntervalsTestCreator.create(IntervalType.UNOPENED);
-		assertFalse(unopenedValidator.validator(unOpenedPivot,intervals.get(0)));
-		assertFalse(unopenedValidator.validator(unOpenedPivot,intervals.get(1)));
-		assertTrue(unopenedValidator.validator(unOpenedPivot,intervals.get(2)));
-		assertTrue(unopenedValidator.validator(unOpenedPivot,intervals.get(3)));
-		assertTrue(unopenedValidator.validator(unOpenedPivot,intervals.get(4)));
-		assertFalse(unopenedValidator.validator(unOpenedPivot,intervals.get(5)));
-		assertFalse(unopenedValidator.validator(unOpenedPivot,intervals.get(6)));
+		assertFalse(unopenedValidator.validate(unOpenedPivot,intervals.get(0)));
+		assertFalse(unopenedValidator.validate(unOpenedPivot,intervals.get(1)));
+		assertTrue(unopenedValidator.validate(unOpenedPivot,intervals.get(2)));
+		assertTrue(unopenedValidator.validate(unOpenedPivot,intervals.get(3)));
+		assertTrue(unopenedValidator.validate(unOpenedPivot,intervals.get(4)));
+		assertFalse(unopenedValidator.validate(unOpenedPivot,intervals.get(5)));
+		assertFalse(unopenedValidator.validate(unOpenedPivot,intervals.get(6)));
 
 	}
 }

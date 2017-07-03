@@ -27,50 +27,50 @@ public class IncludedIntervaltypeBothValidatorTest {
 	@Test
 	public void isIncludedIntervalTypeBothTest() {
 
-		assertFalse(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(10, 15, IntervalType.BOTH_OPENED)));
-		assertFalse(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(15, 20, IntervalType.BOTH_OPENED)));
-		assertTrue(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(20, 25, IntervalType.BOTH_OPENED)));
-		assertTrue(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(25, 30, IntervalType.BOTH_OPENED)));
-		assertTrue(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(30, 35, IntervalType.BOTH_OPENED)));
-		assertFalse(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(35, 40, IntervalType.BOTH_OPENED)));
-		assertFalse(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(40, 45, IntervalType.BOTH_OPENED)));
+		assertFalse(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(10, 15, IntervalType.BOTH_OPENED)));
+		assertFalse(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(15, 20, IntervalType.BOTH_OPENED)));
+		assertTrue(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(20, 25, IntervalType.BOTH_OPENED)));
+		assertTrue(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(25, 30, IntervalType.BOTH_OPENED)));
+		assertTrue(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(30, 35, IntervalType.BOTH_OPENED)));
+		assertFalse(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(35, 40, IntervalType.BOTH_OPENED)));
+		assertFalse(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(40, 45, IntervalType.BOTH_OPENED)));
 		
 	}
 	
 	@Test
 	public void isIncludedIntervalTypeBothAndLeftTest() {
-		assertFalse(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(10, 15, IntervalType.LEFT_OPENED)));
-		assertFalse(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(15, 20, IntervalType.LEFT_OPENED)));
-		assertTrue(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(20, 25, IntervalType.LEFT_OPENED)));
-		assertTrue(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(25, 30, IntervalType.LEFT_OPENED)));
-		assertFalse(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(30, 35, IntervalType.LEFT_OPENED)));
-		assertFalse(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(35, 40, IntervalType.LEFT_OPENED)));
-		assertFalse(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(40, 45, IntervalType.LEFT_OPENED)));
+		assertFalse(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(10, 15, IntervalType.LEFT_OPENED)));
+		assertFalse(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(15, 20, IntervalType.LEFT_OPENED)));
+		assertTrue(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(20, 25, IntervalType.LEFT_OPENED)));
+		assertTrue(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(25, 30, IntervalType.LEFT_OPENED)));
+		assertFalse(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(30, 35, IntervalType.LEFT_OPENED)));
+		assertFalse(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(35, 40, IntervalType.LEFT_OPENED)));
+		assertFalse(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(40, 45, IntervalType.LEFT_OPENED)));
 		
 	}
 	
 	@Test
 	public void isIncludedIntervalTypeBothAndRightTest() {
-		assertFalse(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(10, 15, IntervalType.RIGHT_OPENED)));
-		assertFalse(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(15, 20, IntervalType.RIGHT_OPENED)));
-		assertFalse(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(20, 25, IntervalType.RIGHT_OPENED)));
-		assertTrue(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(25, 30, IntervalType.RIGHT_OPENED)));
-		assertTrue(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(30, 35, IntervalType.RIGHT_OPENED)));
-		assertFalse(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(35, 40, IntervalType.RIGHT_OPENED)));
-		assertFalse(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(40, 45, IntervalType.RIGHT_OPENED)));
+		assertFalse(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(10, 15, IntervalType.RIGHT_OPENED)));
+		assertFalse(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(15, 20, IntervalType.RIGHT_OPENED)));
+		assertFalse(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(20, 25, IntervalType.RIGHT_OPENED)));
+		assertTrue(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(25, 30, IntervalType.RIGHT_OPENED)));
+		assertTrue(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(30, 35, IntervalType.RIGHT_OPENED)));
+		assertFalse(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(35, 40, IntervalType.RIGHT_OPENED)));
+		assertFalse(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(40, 45, IntervalType.RIGHT_OPENED)));
 		
 	}
 
 	
 	@Test
 	public void isIncludedIntervalTypeBothAndUnopendTest() {
-		assertFalse(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(10, 15, IntervalType.UNOPENED)));
-		assertFalse(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(15, 20, IntervalType.UNOPENED)));
-		assertFalse(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(20, 25, IntervalType.UNOPENED)));
-		assertTrue(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(25, 30, IntervalType.UNOPENED)));
-		assertFalse(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(30, 35, IntervalType.UNOPENED)));
-		assertFalse(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(35, 40, IntervalType.UNOPENED)));
-		assertFalse(bothValidator.validator(bothOpenedPivot, IntervalFactory.getInterval(40, 45, IntervalType.UNOPENED)));
+		assertFalse(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(10, 15, IntervalType.UNOPENED)));
+		assertFalse(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(15, 20, IntervalType.UNOPENED)));
+		assertFalse(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(20, 25, IntervalType.UNOPENED)));
+		assertTrue(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(25, 30, IntervalType.UNOPENED)));
+		assertFalse(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(30, 35, IntervalType.UNOPENED)));
+		assertFalse(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(35, 40, IntervalType.UNOPENED)));
+		assertFalse(bothValidator.validate(bothOpenedPivot, IntervalFactory.getInterval(40, 45, IntervalType.UNOPENED)));
 		
 	}
 

@@ -18,17 +18,17 @@ public class IncludedIntervalValidator implements IncludedIntervalValidatorStrat
 	
 	
 	@Override
-	public boolean validator(Interval intervalComparador, Interval interval) {
+	public boolean validate(Interval intervalComparador, Interval interval) {
 		switch (intervalComparador.getIntervalType()) {
 		case BOTH_OPENED:
-			return bothValidator.validator(intervalComparador, interval);
+			return bothValidator.validate(intervalComparador, interval);
 		case LEFT_OPENED:
-			return leftValidator.validator(intervalComparador, interval);
+			return leftValidator.validate(intervalComparador, interval);
 			
 		case RIGHT_OPENED:
-			return rightValidator.validator(intervalComparador, interval);
+			return rightValidator.validate(intervalComparador, interval);
 		case UNOPENED:
-			return unopenedValidator.validator(intervalComparador, interval);
+			return unopenedValidator.validate(intervalComparador, interval);
 		default:
 			return false;
 		}

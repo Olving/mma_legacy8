@@ -15,7 +15,7 @@ public class IncludedIntervaltypeBothValidator implements IncludedIntervalValida
 	}
 
 	@Override
-	public boolean validator(Interval intervalComparador, Interval interval) {
+	public boolean validate(Interval intervalComparador, Interval interval) {
 		boolean isMinimunIncluded = false;
 		boolean isMaximumIncluded = false;
 

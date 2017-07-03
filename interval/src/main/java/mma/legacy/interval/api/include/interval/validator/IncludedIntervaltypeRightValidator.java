@@ -15,7 +15,7 @@ public class IncludedIntervaltypeRightValidator implements IncludedIntervalValid
 		this.bdComparator = new BigDecimalComparator();
 	}
 	@Override
-	public boolean validator(Interval intervalComparador, Interval interval) {
+	public boolean validate(Interval intervalComparador, Interval interval) {
 	
 		boolean isMaximumIncluded = false;
 		

@@ -52,7 +52,7 @@ private IntersectionIntervalsValidator intersectionValidator;
 	 * @return boolean
 	 */
 	public boolean isIncluidedInterval(Interval intervalComparador, Interval interval) {
-		return includedValidator.validator(intervalComparador, interval);
+		return includedValidator.validate(intervalComparador, interval);
 	} 
 	
 

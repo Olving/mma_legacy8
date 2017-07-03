@@ -5,10 +5,15 @@ H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\api\include\interv
 H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\IntervalType.java
 H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\api\include\interval\validator\IncludedIntervaltypeLeftValidator.java
 H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\api\include\value\validator\IncludeValueValidator.java
+H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\api\intersection\validator\IntersectionIntervalsValiatorStrategy.java
 H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\IntervalFactory.java
 H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\api\IntervalsApi.java
 H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\Interval.java
 H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\api\include\interval\validator\IncludedIntervalValidatorStrategy.java
+H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\api\intersection\validator\IntersectionIntervalsTypeLeftValidator.java
 H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\api\include\interval\validator\IncludedIntervaltypeBothValidator.java
+H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\api\intersection\validator\IntersectionIntervalsTypeRightValidator.java
+H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\api\intersection\validator\IntersectionIntervalsCommonValidator.java
 H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\api\comparator\BigDecimalComparator.java
 H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\api\include\interval\validator\IncludedIntervaltypeUnopenedValidator.java
+H:\git\mma_legacy8\interval\src\main\java\mma\legacy\interval\api\intersection\validator\IntersectionIntervalsTypeUnopenedValidator.java
